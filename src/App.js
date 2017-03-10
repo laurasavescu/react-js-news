@@ -132,14 +132,22 @@ class App extends Component {
             */
 
 
-        if ( news ) {
 
-            console.log( news )
+        if (news) {
 
-            const _title = news.articles[ 0 ].title
+            console.log(news)
+
+            const _title = news.articles[1].title
+
+            var image = news.articles[1].urlToImage;
+            var img = new Image();
+            img = image
+
+            const description = news.articles[1].description
+
 
             return (
-                <NewsCard picture={ defaultPicture } text={ 'hey' } title={ _title }
+                <NewsCard picture={img} text={description} title={_title}
                 />
             )
         }
